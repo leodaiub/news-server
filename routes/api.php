@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    error_log(auth()->user()->load("preferences"));
     return auth()->user()->load("preferences");
 });
 
